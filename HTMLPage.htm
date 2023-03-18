@@ -1,0 +1,81 @@
+﻿<!doctype html>
+<html>
+<head>
+    <title>Create dynamic table from ArrayList using JavaScript</title>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+ 
+</head>
+<body>
+  <button id="action-button">Click me to load info!</button>
+<div id="info"></div>
+
+<small>Demo created by <a href="https://twitter.com/AurelioDeRosa">Aurelio De Rosa</a></small>
+    <script type="text/javascript">
+
+//        $.get("https://api.webshrinker.com/categories/v3", function (response) {
+//            alert(response);
+//        
+//         }).error(function () { });
+
+//    
+     var request= new XMLHttpRequest();
+     request.open("GET","https://www.klazify.com/api/categorize");
+     request.setRequestHeader("Authorization", "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOGZhODI1ZmJlYzM2MWIyZTUyOTViZjNhZTI0MmE3YzRiZWJjNjQ1Y2RiYzJmODMzMGJlZDBlZmIxOGIyYWFiMjU5NGY5OTkwNTNlZDdmOTkiLCJpYXQiOjE2NjcxOTUzNTYsIm5iZiI6MTY2NzE5NTM1NiwiZXhwIjoxNjk4NzMxMzU2LCJzdWIiOiI4NjE4Iiwic2NvcGVzIjpbXX0.Hokw6vPNzQlIzvHwc0meS1Qlfh2x_yoaY-yV3W_b1usd3Pk6dyb84ekQoCdOsToho30bqpgJtu3rt6duvSHbHg");
+     request.send();
+     request.onload= () =>{
+     alert(JSON.parse(request.error));
+
+        }
+
+//        var settings = {
+
+//            "async": true,
+//            "crossdomain": true,
+//            "url": "https://www.klazify.com/api/categorize",
+//            "method": "POST",
+//            "headers": {
+//                "Accept": "application/json",
+//                "Content-Type": "application/json",
+//                "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOGZhODI1ZmJlYzM2MWIyZTUyOTViZjNhZTI0MmE3YzRiZWJjNjQ1Y2RiYzJmODMzMGJlZDBlZmIxOGIyYWFiMjU5NGY5OTkwNTNlZDdmOTkiLCJpYXQiOjE2NjcxOTUzNTYsIm5iZiI6MTY2NzE5NTM1NiwiZXhwIjoxNjk4NzMxMzU2LCJzdWIiOiI4NjE4Iiwic2NvcGVzIjpbXX0.Hokw6vPNzQlIzvHwc0meS1Qlfh2x_yoaY-yV3W_b1usd3Pk6dyb84ekQoCdOsToho30bqpgJtu3rt6duvSHbHg",
+//                "cache-control": "no-cache"
+//            },
+//            "processData": false, 
+//            "data": "{\"url\":\"https://www.tutorialspoint.com\"}"
+//        }
+//        $.ajax(settings).done(function (response) {
+//            alert(response.domain.categories[0].name);
+//                });
+
+
+//        $('#action-button').click(function () {
+
+//            $.ajax({
+//                  type: 'GET',
+//                url: 'https://jsonplaceholder.typicode.com/users',
+//              
+//                data: {
+////                    format: 'json'
+
+//                },
+//                error: function (data) {
+//                alert(data.error);
+//                    $('#info').html('<p>An error has occurred</p>');
+//                },
+//                dataType: 'json',
+////                headers: {
+////                    "Authorization": "Basic " + btoa('nMp7KZN6CMGlifBzereZ:5Xwq162a5KuLJW0LdcaN')
+////                },
+//                success: function (data) {
+//                  
+//                    //var $title = $('<h1>').text(dta.data[0].categories[0].id);
+//                    //var $description = $('<p>').text(data.talks[0].talk_description);
+//                    $('#info') = 'hi';
+//                    //            .append($title)
+//                    //            .append($description);
+//                },
+//              
+//            });
+//        });
+    </script>
+</body>
+</html>
